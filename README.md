@@ -14,30 +14,31 @@
 
 Clone the repository
 
-'''bash
+```bash
 https://github.com/golukumarsha/End-to-End-Books-Recommender-System
+```
 
 ### STEP 01- Create a conda environment after opening the repository
 
-'''bash
+```bash
 conda create -n books python=3.7.10 -y
-'''
+```
 
-'''bash
+```bash
 conda activate books
-'''
+```
 
 ### STEP 02- install the requirements
-'''
+```bash
 pip install -r requirements.txt
-'''
+```
 
 
 # Streamlit app Docker Image Deployment
 ## 1. Login with your AWS console and launch an EC2 instance
 ## 2. Run the following commands
 Note: Do the port mapping to this port:- 8501
-'''bash
+```bash
 sudo apt-get update -y
 
 sudo apt-get upgrade
@@ -51,39 +52,39 @@ sudo sh get-docker.sh
 sudo usermod -aG docker ubuntu
 
 newgrp docker
-'''
+```
 
-'''bash
+```bash
 
 git clone "your-project"
-'''
-'''bash
+```
+```bash
 docker build -t entbappy/stapp:latest . 
-'''
-'''bash
+```
+```bash
 docker images -a  
-'''
-'''bash
+```
+```bash
 docker run -d -p 8501:8501 entbappy/stapp 
-'''
-'''bash
+```
+```bash
 docker ps
-'''
-'''bash  
+```
+```bash  
 docker stop container_id
-'''
-'''bash
+```
+```bash
 docker rm $(docker ps -a -q)
-'''
-'''bash
+```
+```bash
 docker login 
-'''
-'''bash
+```
+```bash
 docker push entbappy/stapp:latest 
-'''
-'''bash
+```
+```bash
 docker rmi entbappy/stapp:latest
-'''
-'''bash
+```
+```bash
 docker pull entbappy/stapp
-'''
+```
